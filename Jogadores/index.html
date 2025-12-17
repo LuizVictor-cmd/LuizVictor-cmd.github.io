@@ -1,68 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogadores</title>
+
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: darkslategray;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    width: 350px;
-    background: white;
-    padding: 10px;
-    margin: 60px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    color:  #4CAF50;  
-}
-.botao {
-  background-color: #4CAF50;      
-  color: white;                   
-  padding: 10px 20px;             
-  border: none;                 
-  border-radius: 5px;             
-  font-size: 16px;                
-  cursor: pointer;                
-  transition: 0.3s; 
-  }        
-  .title {
-    color: #4CAF50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }     
+            font-family: Arial, sans-serif;
+            background-color: darkslategray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 15px;
+            margin: 60px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #4CAF50;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .botao {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .botao:hover {
+            background-color: #45a049;
+        }
+
+        .title {
+            color: #4CAF50;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-        <div class="container">
-     <form action="">
-         <h3 class="title">DADOS DO JOGADOR:</h3>
-            <label for="nome">Informe o nome do jogador:</label>
-            <input type="text" placeholder="digite o nome do jogador:">
-            <label for="gols">Gols:</label>
-            <input type="number" placeholder="digite a quantidade de gols:">
-            <label for="time">Time:</label>
-            <input type="text" placeholder="digite o time atual:">
-            <label for="assistências">Assistências:</label>
-            <input type="number" placeholder="digite a quantidade de assistências">
-            <label for="idade">Idade</label>
-            <input type="text" placeholder="digite a idade:">
-            <label for="nacionalidade">Nacionalidade:</label>
-            <input type="text" placeholder="digite a nacionalidade:"><br><br>
-            <a href="resposta.html"> <button class="botao">Ver dados do jogador</button></a>
-         </div>
+
+<div class="container">
+    <form action="resposta.html" method="get">
+    <h3 class="title">CRIE SEU JOGADOR DE FUTEBOL</h3>
+
+        <label for="nome">Nome do jogador:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+
+        <label for="gols">Gols:</label>
+        <input type="number" id="gols" name="gols" placeholder="Gols">
+
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" placeholder="Time atual">
+
+        <label for="assistencias">Assistências:</label>
+        <input type="number" id="assistencias" name="assistencias"  placeholder="Assistências">
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" placeholder="Idade">
+
+        <label for="nacionalidade">Nacionalidade:</label>
+        <input type="text" id="nacionalidade" name="nacionalidade" placeholder="Nacionalidade">
+
+        <button type="submit" class="botao">
+            Ver o perfil do jogador
+        </button>
     </form>
-    <a href="resposta.html"> <button class="botao">Ver dados do jogador</button></a>
 </div>
+
 </body>
 </html>
